@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        document.write("hello")    </script>
-</body>
+      // document.write("hello")
+      // variable
+      var a = 44;
+      let firstName = "ahmadshah";
+      const pi = 3.14;
+      document.write(a, "<br/>");
+      document.write(firstName, "<br/>");
+      document.write(pi, "<br/>");
+      // date types
+      //1 primitiv
+      //1.1: undefined ==>let name
+      //1.2: null ==> let name = null
+      //1.3: number ==> let num = 33
+      //1.4: string ==> let name = 'ahmad',"ahmad",`ahmad`
+      //1.5: boolean ==> let isSelected = true
+      //2: object
+      //2.1: array const arr = [1,2,3,'a','b','c']
+      //2.2: object const obj = {name: 'ali,age:44}
+      //2.3: date
+      //2.3: function function functionName(){ document.write('this is a function'}
+      // note: javascript is dynamic type language it means that the data type can change
+      // like: name ='ali' we can set name = 88 no problem
+
+      // operators
+      //1: arithmetic
+      let x = 44;
+      let y = 42;
+
+      document.write(x + y, "<br>");
+      document.write(x - y, "<br>");
+      document.write(x * y, "<br>");
+      document.write(x / y, "<br>");
+      document.write(x ** y, "<br>");
+      document.write(x % y, "<br>");
+      document.write(++x, "<br>");
+      document.write(--x, "<br>");
+      document.write(y++, "<br>");
+      document.write(y--, "<br>");
+      //2: assignment
+      let number = 44;
+      let numberTwo = number + 4
+      //3:comparsion  > < lose equality == (value) != <= >= strict equality === (type) !== 
+      document.write(x > y,"<br>");
+      //4:ternary operator
+      let totalPrice = 400
+      let discount = totalPrice > 300 ? "10%" : "5%";
+      document.write(discount, "<br>");
+      //5:logical operator && , || , ! , falsy (0,undefined,false,null,"",NaN),truty (expecte falsy)
+
+      // Operators exercise
+      // swaping
+      let numOne = 33
+      let numTwo = 44
+      document.write("num one ",numOne, "<br>");
+      document.write("num two ",numTwo, "<br>");
+      let temp = numOne;
+      numOne = numTwo;
+      numTwo = temp;
+      document.write("num one ",numOne, "<br>");
+      document.write("num two ",numTwo, "<br>");
+      
+
+      
+
+    </script>
+  </body>
 </html>
