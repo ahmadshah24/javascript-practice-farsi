@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // const  car = 
+    //     {
+    //         color:'red',
+    //         model:'mdii4',
+    //         speed: '4444',
+    //         break: () =>
+    //         {
+    //             document.write("this is car break");
+    //         }
+    //     }
+    // const  car2 = 
+    // {
+    //     color:'red',
+    //     model:'mdii4',
+    //     speed: '4444',
+    //     break: () =>
+    //     {
+    //         document.write("this is car break");
+    //     }
+    // }
+    //  to prevent the code repeation we do the following
+    // function createCar()
+    // {
+    //     color= 'red'
+    //     model='mdii4'
+    //     speed= '4444'
+    //     // function break()
+    //     // {
+    //     //     document.write("break")
+    //     // }
+    // }
+
+    // const car1 = new  createCar();
+    //factory funcation
+    // function createCar(color,model,speed)
+    // {
+    //     return {
+    //         color,
+    //         model,
+    //         speed,
+    //         break() {
+    //             document.write("this is car break");
+    //         },
+    //     };
+    // }
+        
+
+
+    // const car1 = new createCar('red','m334',333);
+    // document.write(car1.color);
+    // car1.break();
+    // const car2 = createCar("green",'j333',555)
+    // document.write(car2.model)
+
+
+    //constructor function
+
+    // function add(a,b)
+    // {
+    //     this.a = a;
+    //     this.b = b;
+    //     this.result = () =>
+    //     {
+    //         document.write(a+b);
+    //     }
+    // }
+
+    // const add1 = new add(444,22);
+    // document.write(add1.result());
+
+
+    // const circel =
+    // {
+    //     raduis:33,
+    // }
+
+    // // const circel = {}
+    // circel.raduis = 44
+    // document.write(circel.raduis)
+
+    // circel.draw = function ()
+    // {
+    //     document.write("draw")
+    // }
+    // circel.draw()
+
+    // let a =9;
+    // let b = a;
+    // document.write(a,b)
+    // a =77
+    // document.write("a after",a)
+
+    // document.write('b after',b)
+
+
+    // const obj = 
+    // {
+    //     name:'jan',
+    // }
+
+    // document.write("-----------------------------")
+    // const obj2 = obj;
+
+    // document.write(obj.name,"--- ",obj2.name)
+
+    // obj2.age=99;
+    // document.write(obj.age)
+
+
+    // let message = "this is a message";
+    // document.write(message[3])
+    // message.toUpperCase
+    // document.write(message)
+    // message.replace('this','these')
+    // document.write(message)
+    // let des = `this is a 
+    //           good thing`;
+
+
+        //  document.write(des )
+    // document.write(des[5])
+
+    // const now = new Date()
+    
+    // document.write(now)
+
+
+
+    // const obj = 
+    // {
+    //     name: 'ali',
+    //     age : 33,
+    //     address : { city: 'kabul', countr:'afg'},
+    // }
+
+    // function user(obj)
+    // {
+        
+        
+    //         for(let key in obj)
+    //         {
+    //             document.write(key,obj[key])
+    //         }
+        
+    // }
+
+    // user(obj)
+
+
+    // function user(name,age,street)
+    // {
+    //     return {
+    //         name,
+    //         age,
+    //         street,
+    //     }
+    // }
+
+    // const u1 = user('ali',22,'r')
+    // document.write(u1.name)
+
+
+    // function user2 (name,age,street)
+    // {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.street = street;
+    // }
+
+    // const uu1 = new user2('khan',44,'j')
+
+    // document.write(uu1.age)
+
+    function post (title,body,author,views,comments,isLive)
+    {
+        this.title = title;
+        this.body = body;
+        this.author = author;
+        this.views = views;
+        this.comments = comments;
+        // this.comments.body = body;
+        this.isLive = isLive;
+    }
+
+
+    const p1 = new post('hello','this is hello','shah',33,'hello',true);
+
+    document.write(p1.title,"<br>")
+    document.write(p1.body,"<br>")
+    document.write(p1.author,"<br>")
+    document.write(p1.views,"<br>")
+    document.write(p1.comments,"<br>")
+    document.write(p1.isLive,"<br>")
+    // document.write(p1.title)
+</script>
+</body>
+</html>

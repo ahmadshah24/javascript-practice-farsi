@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center;" >
+    <div>
+
+        <button id="add">+</button>
+        <button id="reset">reset</button>
+        <button id="remove">-</button>
+        <p >counter : <span id="counter"></span></p>
+    </div>
+<script>
+    const addBtn = document.querySelector('#add');
+    const removeBtn = document.querySelector('#remove');
+    const resetBtn = document.querySelector('#reset');
+
+    const counter = document.querySelector('#counter');
+    // document.write(counter.innerHTML);
+    addBtn.addEventListener('click',() =>
+    {
+        counter.innerHTML ++;
+    })
+    removeBtn.addEventListener('click',() =>
+    {
+        counter.innerHTML -= 1;
+        if (counter.textContent < 0 )
+        {
+            alert('you can not decrease the counter')
+            // break;
+        }
+    })
+    resetBtn.addEventListener('click',() =>
+    {
+        counter.innerHTML = '';
+    })
+
+</script>
+</body>
+</html>

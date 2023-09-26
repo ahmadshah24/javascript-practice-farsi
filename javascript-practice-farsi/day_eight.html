@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <button id="btn2">click2</button>
+
+    <h1>hello</h1>
+    <div id="div" style="display: none;">
+        <h2>this is a div</h2>
+        <ul>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+        </ul>
+    </div>
+    <p id="input-p"></p>
+    <input type="text" name="" id="input">
+<script>
+    const btn = document.querySelector('#btn');
+    const btn2 = document.querySelector('#btn2');
+    const bod = document.querySelector('body');
+    const h1 = document.querySelector('h1');
+    const div = document.querySelector('#div');
+
+    btn.addEventListener('click',()=>{
+        // alert('the button clicked')
+        // bod.style.color = 'red';
+        h1.innerHTML = "shah";
+        h1.style.color = 'red';
+        div.style.display = 'block';
+    })
+    
+    btn2.addEventListener('click', ()=>{
+        div.style.display = 'none';
+        h1.innerHTML = "ahmad shah";
+        h1.style.color = 'blue';
+    })
+
+    const p = document.createElement('p');
+
+    for(let i = 0; i < 20 ; i++) 
+    {
+        p.innerHTML = i;
+        bod.appendChild(p);
+    }
+
+
+    if (p.innerHTML  < 50 )
+    {
+        const pbtn = document.createElement('button');
+        const squer = document.createElement('div');
+        pbtn.innerHTML = 'clike me ';
+        bod.appendChild(pbtn);
+        squer.innerHTML = 'clike';
+        squer.style.color = 'red';
+        squer.style.width = '200px';
+        squer.style.height = '200px';
+        squer.style.border = '1px solid black';
+        squer.style.background = 'yellow'; 
+        squer.style.display = 'none';
+        bod.appendChild(squer);
+        
+        pbtn.addEventListener('click', ()=>
+        {
+            squer.style.display = 'block';
+            bod.style.background = 'green';
+            bod.style.color = 'red';
+            pbtn.style.color = 'red';
+        })
+    const inputp = document.querySelector('#input-p');
+    const input = document.querySelector('#input');
+
+    input.addEventListener('input', ()=>{
+        const inputvalue = input.value;
+        // document.write(inputvalue)
+        inputp.innerHTML = inputvalue;
+        if(inputvalue.length > 30 )
+        {
+            alert('you can not tye any more')
+        }
+    })
+
+    }
+</script>
+</body>
+</html>

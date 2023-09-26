@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="h1">this is header one</h1>
+    <p>hello i am para</p>
+    <p>hello i am para</p>
+    <p>hello i am para</p>
+    <p>hello i para</p>
+    <p>hello i am para</p>
+    <div class="div">this is div</div>
+<script>
+
+    const headerOne = document.querySelector('h1');
+    const paramsOne = document.querySelectorAll('p');
+    document.write(headerOne)
+
+    document.write(headerOne.innerHTML)
+    headerOne.innerHTML = 'this is not header one';
+    
+    document.write("<br>",headerOne.innerHTML)
+
+    // headerOne.remove()
+    headerOne.style.color = 'red';
+    headerOne.style.background = 'green';
+    headerOne.style.border = '5px solid black';
+
+    // paramsOne.style.fontWeight = 'bold';
+    // paramsOne.style.fontSize = '100px';
+
+    paramsOne.forEach((item)=> item.style.color = 'red')
+
+    paramsOne.forEach((item)=>
+    {
+        if (item.innerHTML.includes('am'))
+        {
+            item.remove()
+        }
+        if (item.style.color === 'red')
+        {
+            item.style.color = 'green'
+        }
+    })
+
+
+    const addedPara = document.createElement('h3');
+
+    addedPara.textContent = 'i am added to the document';
+
+    document.querySelector('#h1').appendChild(addedPara);
+
+    const addedButton = document.createElement('button');
+    addedButton.innerHTML = 'send';
+    document.querySelector('.div').appendChild(addedButton);
+
+    const addedImage = document.createElement('img');
+    addedImage.src = 'images/jan.jpg';
+    addedImage.style.width = '100px';
+    addedImage.style.height = '100px';
+    document.querySelector('.div').appendChild(addedImage);
+
+    document.write("<hr/>");
+
+
+    const courses = 
+    [
+       { title: 'Course 1', isExist: true},
+        {title: 'Course 2', isExist: false},
+        {title: 'Course 3', isExist: true},
+        {title: 'Course 4', isExist: false},
+        {title: 'Course 5', isExist: true}, 
+    ]
+
+
+
+    const avaliableCourses = courses.filter((course) => course.isExist === true);
+
+    const showAvailableCourses = document.createElement('h1');
+
+    showAvailableCourses.innerHTML = `Available courses are ${avaliableCourses.length}`
+
+    const body = document.querySelector('body');
+
+    body.appendChild(showAvailableCourses);
+
+    avaliableCourses.forEach((ac) => 
+    {
+        const p = document.createElement('p');
+        p.innerHTML = ac.title;
+        body.appendChild(p);
+    })
+
+    document.write("<hr/>");
+
+
+    const students = 
+    [
+        {name:'ali',age:22,isPresent:true},
+        {name:'jan',age:23,isPresent:true},
+        {name:'khan',age:33,isPresent:false},
+        {name:'asad',age:22,isPresent:true},
+        {name:'wali',age:20,isPresent:true},
+        {name:'gul',age:21,isPresent:false},
+        {name:'shah',age:25,isPresent:true},
+        {name:'ahmad',age:22,isPresent:false},
+        {name:'din',age:32,isPresent:true},
+    ]
+
+
+    const body2 = document.querySelector('body');
+
+    const presentStudents = students.filter((student) => student.isPresent === true);
+
+    const presentStudentsList = document.createElement('h1');
+
+    presentStudentsList.innerHTML = `the present students in the class are : ${presentStudents.length}`;
+
+    body2.appendChild(presentStudentsList);
+
+    presentStudents.forEach((student) => 
+    {
+        const studentsList = document.createElement('li');
+        studentsList.innerHTML = student.name+"  "+student.age;
+        body2.appendChild(studentsList);
+    })
+
+
+    document.write("<hr/>")
+    const employee = 
+    [
+        {name:'ali',isTeacher:true},
+        {name:'jan',isTeacher:true},
+        {name:'khan',isTeacher:true},
+        {name:'gul',isTeacher:false},
+        {name:'shah',isTeacher:true},
+    ]
+
+    const body3 = document.querySelector('body');
+
+    const teachers = employee.filter((emp) =>  emp.isTeacher===true);
+    
+    const teacherPara = document.createElement('p');
+
+    teacherPara.innerHTML = `the number of teachers in the office : ${teachers.length}`;
+
+    body3.appendChild(teacherPara);
+
+
+    teachers.forEach((teacher) =>
+    {
+        const teacherList = document.createElement('li');
+        teacherList.innerHTML = teacher.name;
+        body3.appendChild(teacherList);
+    })
+
+
+
+
+</script>
+
+</body>
+</html>
